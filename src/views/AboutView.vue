@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>¿Tienes algún problema para entender el mercado de la publicidad digital?</h1>
   </div>
 </template>
 
