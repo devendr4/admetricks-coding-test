@@ -17,7 +17,8 @@ export default {
         '100%': '100%'
       },
       colors: {
-        background: '#0A2540'
+        background: '#0A2540',
+        cyan: '#00D4FF'
       }
     }
   },

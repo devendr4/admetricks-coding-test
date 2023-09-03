@@ -49,36 +49,41 @@ const sections: Section[] = [
     <div class="relative flex mt-80 flex-wrap ml-20% w-60%">
       <div class="p-2 w-1/2">
         <div class="p-2">
-          <h4>Estamos para ayudarte</h4>
+          <h4 class="text-cyan">Estamos para ayudarte</h4>
           <h1 class="text-4xl mb-5 mt-3">
-            ¿Tienes problemas para entender el mercado de la publicidad digital?
+            ¿Tienes problemas para
+            <span class="bg-gradient-to-r from-cyan rounded-full to-green-500 h-2 text-inherit"
+              >entender el mercado </span
+            >de la publicidad digital?
           </h1>
           <p class="mb-2">
-            El Mercado de la publicidad online es incierto y complejo, Admetricks te ayuda a
-            visibilizar cómo desempeñan las campañas y contenidos versus los de tu competencia en
-            tiempo real con reportes y alertas automáticas
+            El Mercado de la publicidad online es incierto y complejo, Admetricks te
+            <mark class="text-cyan bg-transparent">
+              ayuda a visibilizar cómo desempeñan las campañas y contenidos</mark
+            >
+            versus los de tu competencia en tiempo real con reportes y alertas automáticas
           </p>
-          <div class="flex gap-2">
-            <button class="p-3 bg-cyan-300 pl-10 pr-10 text-black rounded-full">
-              Solicitar demo
-            </button>
+          <div class="flex gap-2 mt-4">
+            <button class="p-3 bg-cyan pl-10 pr-10 text-black rounded-full">Solicitar demo</button>
             <button>Ver funcionalidades</button>
           </div>
         </div>
       </div>
       <div class="w-1/2">
-        <div class="relative">
-          <div class="absolute border-white border-2 rounded-lg h-[15rem] w-[20rem]"></div>
-          <div class="absolute border-white border-2 rounded-lg h-[15rem] w-[20rem]"></div>
+        <img class="absolute -top-[20rem] -right-[36rem]" src="./assets/polygons.png" />
+        <div class="relative left-20">
+          <div
+            class="absolute border-white bg-background border rounded-lg h-[24rem] w-[24rem] top-[1.5rem]"
+          ></div>
+          <div
+            class="absolute right-: border-white border bg-background rounded-lg h-[27rem] w-[12rem]"
+          ></div>
         </div>
-        <img class="right-[17rem] bg-background top-[35rem] z-20" src="./assets/rectangles.png" />
       </div>
-      <div class="w-full flex mt-4">
+      <div class="w-full flex mt-20">
         <SectionItem v-for="section in sections" v-bind:key="section.title" :item="section" />
       </div>
     </div>
-
-    <img class="absolute top-[40%] -right-44" src="./assets/polygons.png" />
 
     <div class="overflow-hidden">
       <img class="relative left-60" src="./assets/yellotriangle.png" />
