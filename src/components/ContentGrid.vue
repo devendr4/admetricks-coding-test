@@ -17,8 +17,8 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 0.25fr repeat(5, 1fr) 0.25fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .div1 {
