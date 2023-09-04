@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionItem from './components/SectionItem.vue'
+import ContentGrid from './components/ContentGrid.vue'
 import type { Section } from './types'
 const positions = ['20', '35', '50', '65', '80']
 
@@ -32,7 +33,7 @@ const sections: Section[] = [
 </script>
 
 <template>
-  <div class="relative min-h-screen">
+  <div class="min-h-screen">
     <div class="triangle"></div>
 
     <!-- <div class="vl left-20%"></div>
@@ -70,23 +71,31 @@ const sections: Section[] = [
         </div>
       </div>
       <div class="w-1/2">
-        <img class="absolute -top-[20rem] -right-[36rem]" src="./assets/polygons.png" />
+        <img
+          class="absolute -top-[20rem] -right-[36rem]"
+          width="800px"
+          height="500px"
+          src="./assets/polygons.png"
+        />
+
         <div class="relative left-20">
           <div
-            class="absolute border-white bg-background border rounded-lg h-[24rem] w-[24rem] top-[1.5rem]"
+            class="absolute border-white bg-background border rounded-lg h-[320px] w-[380px] top-[24px]"
           ></div>
           <div
-            class="absolute right-: border-white border bg-background rounded-lg h-[27rem] w-[12rem]"
+            class="absolute right-20 border-white border bg-background rounded-2xl h-[384px] w-[192px]"
           ></div>
         </div>
       </div>
-      <div class="w-full flex mt-20">
+
+      <div class="w-full flex mt-20 mb-20">
         <SectionItem v-for="section in sections" v-bind:key="section.title" :item="section" />
       </div>
-    </div>
 
+      <ContentGrid />
+    </div>
     <div class="overflow-hidden">
-      <img class="relative left-60" src="./assets/yellotriangle.png" />
+      <img class="absolute -left-12 w-52" src="./assets/orangetriangle.png" />
     </div>
   </div>
 </template>
