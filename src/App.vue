@@ -3,9 +3,8 @@ import MainLayout from './components/MainLayout.vue'
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="relative flex flex-col">
     <MainLayout />
-
     <RouterView />
   </div>
 </template>

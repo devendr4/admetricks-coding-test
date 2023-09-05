@@ -1,18 +1,26 @@
 <script setup lang="ts">
 import SectionList from '@/components/SectionList.vue'
 import ContentGrid from '@/components/ContentGrid.vue'
-import PlaceholderCards from '@/components/PlaceholderCards.vue'
+import PlaceholderCards from '@/components/icons/PlaceholderCards.vue'
 import MainContent from '@/components/MainContent.vue'
+import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue'
 </script>
 
 <template>
   <main class="relative md:mt-80 md:ml-20% md:mr-20% ml-[5%] mr-5%">
     <div class="flex flex-wrap-reverse w-full">
-      <div class="md:w-1/2 w-full">
+      <div class="lg:w-1/2 w-full">
         <MainContent />
       </div>
       <div class="md:w-1/2 w-full">
-        <PlaceholderCards />
+        <div class="relative">
+          <div class="">
+            <PlaceholderCards />
+          </div>
+          <div class="absolute -top-[20rem] -right-[37rem] opacity-30">
+            <BackgroundPolygons />
+          </div>
+        </div>
       </div>
     </div>
     <div>

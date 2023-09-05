@@ -3,8 +3,7 @@ import { useWindowSize } from 'vue-window-size'
 
 const positions = [20, 35, 50, 65, 80]
 const mobilePositions = [5, 50, 95]
-const { width, height } = useWindowSize()
-console.log(width.value, height.value)
+const { width } = useWindowSize()
 </script>
 
 <template>
@@ -38,6 +37,7 @@ console.log(width.value, height.value)
   border-left: 3px solid #132d47;
   /* border-left: 3px solid red; */
   z-index: -10;
+  min-height: 100%;
   position: absolute;
   margin-left: -3px;
   top: 0;
