@@ -5,7 +5,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-  <div class="w-[20rem] p-3">
+  <div class="p-3">
     <img :src="`src/assets/${props.item.icon}.png`" />
     <h4>{{ props.item.title }}</h4>
     <p>{{ props.item.content }}</p>

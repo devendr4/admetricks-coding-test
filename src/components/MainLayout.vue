@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const positions = ['20', '35', '50', '65', '80']
+import { useWindowSize } from 'vue-window-size'
+
+const positions = [20, 35, 50, 65, 80]
+const mobilePositions = [5, 50, 95]
+const { width, height } = useWindowSize()
+console.log(width.value, height.value)
 </script>
 
 <template>
@@ -11,9 +16,13 @@ const positions = ['20', '35', '50', '65', '80']
   <div class="vl left-65%"></div>
   <div class="vl left-80%"></div> -->
 
-  <div v-for="p in positions" v-bind:key="p" :class="`vl left-${p}%`"></div>
+  <div
+    v-for="p in width < 768 ? mobilePositions : positions"
+    v-bind:key="p"
+    :class="`vl md: left-${p}%`"
+  ></div>
   <div class="overflow-hidden">
-    <img class="absolute -left-20" src="../assets/greentriangle.png" />
+    <img class="absolute -left-20 top-[10%]" src="../assets/greentriangle.png" />
   </div>
 </template>
 
@@ -29,9 +38,9 @@ const positions = ['20', '35', '50', '65', '80']
   border-left: 3px solid #132d47;
   /* border-left: 3px solid red; */
   z-index: -10;
-  height: 100%;
   position: absolute;
   margin-left: -3px;
   top: 0;
+  bottom: 0;
 }
 </style>

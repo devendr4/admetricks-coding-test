@@ -1,9 +1,9 @@
 <template>
-  <div class="p-2">
+  <div class="p-2 flex justify-center flex-col">
     <h4 class="text-cyan">Estamos para ayudarte</h4>
     <h1 class="text-4xl mb-5 mt-3">
       ¿Tienes problemas para<br />
-      <span class="under">entender el mercado </span><br />de la publicidad digital?
+      <mark class="under">entender el mercado </mark><br />de la publicidad digital?
     </h1>
     <p class="mb-2">
       El Mercado de la publicidad online es incierto y complejo, Admetricks te
@@ -12,7 +12,7 @@
       >
       versus los de tu competencia en tiempo real con reportes y alertas automáticas
     </p>
-    <div class="flex gap-4 mt-4">
+    <div class="flex flex-wrap justify-center items-center gap-4 mt-4">
       <button class="p-3 bg-cyan pl-10 pr-10 text-black rounded-full">Solicitar demo</button>
       <button>Ver funcionalidades</button>
     </div>
@@ -24,7 +24,13 @@ h1 {
   position: relative;
   z-index: 10;
 }
-.under::before {
+.under {
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+/* .under::before {
   z-index: -10;
   content: '';
   position: absolute;
@@ -34,5 +40,5 @@ h1 {
   bottom: 30%;
   border-radius: 200px;
   background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
-}
+} */
 </style>

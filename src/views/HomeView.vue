@@ -6,24 +6,22 @@ import MainContent from '@/components/MainContent.vue'
 </script>
 
 <template>
-  <main>
-    <div class="relative flex mt-80 flex-wrap ml-20% w-60%">
-      <div class="p-2 w-1/2">
+  <main class="relative md:mt-80 md:ml-20% md:mr-20% ml-[5%] mr-5%">
+    <div class="flex flex-wrap-reverse w-full">
+      <div class="md:w-1/2 w-full">
         <MainContent />
       </div>
-      <div class="w-1/2">
+      <div class="md:w-1/2 w-full">
         <PlaceholderCards />
       </div>
-
-      <div class="w-full flex mt-20 mb-20">
-        <SectionList />
-      </div>
-
-      <ContentGrid />
     </div>
-    <div class="overflow-hidden">
-      <img class="-left-12 w-52" src="../assets/orangetriangle.png" />
+    <div>
+      <SectionList />
     </div>
+
+    <ContentGrid />
+    <img class="-left-[40%] w-52" src="../assets/orangetriangle.png" />
+    <div class="overflow-hidden"></div>
   </main>
 </template>
 

@@ -3,7 +3,7 @@ import MainLayout from './components/MainLayout.vue'
 </script>
 
 <template>
-  <div class="min-h-screen">
+  <div class="flex flex-col">
     <MainLayout />
 
     <RouterView />

@@ -30,5 +30,8 @@ const sections: Section[] = [
 ]
 </script>
 <template>
-  <SectionItem v-for="section in sections" v-bind:key="section.title" :item="section" />
+  <!-- <div class="w-full flex-wrap md:flex-nowrap flex md:mt-20 mb-20"> -->
+  <div class="grid md:grid-cols-4 md:mt-20 mb-20">
+    <SectionItem v-for="section in sections" v-bind:key="section.title" :item="section" />
+  </div>
 </template>
