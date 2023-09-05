@@ -1,7 +1,11 @@
 <template>
   <div class="relative">
-    <img class="absolute" src="../assets/polygons.png" />
-    <img class="md:absolute md:left-10" src="../assets/rectangles.png" />
+    <img class="md:absolute md:left-10 bg-background z-20" src="../assets/rectangles.png" />
+    <img
+      class="absolute md:-right-[20rem] md:-top-[10rem]"
+      src="../assets/polygons.png"
+      height="500px"
+    />
   </div>
 
   <!-- <div class="">

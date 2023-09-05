@@ -20,17 +20,8 @@ import MainContent from '@/components/MainContent.vue'
     </div>
 
     <ContentGrid />
-    <img class="-left-[40%] w-52" src="../assets/orangetriangle.png" />
-    <div class="overflow-hidden"></div>
+    <img class="relative md:-left-[17rem] -left-[3rem] w-20%" src="../assets/orangetriangle.png" />
   </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style></style>
