@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="631" height="486" viewBox="1020 610 631 486">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="1020 610 631 486">
     <g data-name="Grupo 104">
       <g data-name="Rectángulo 84">
         <path

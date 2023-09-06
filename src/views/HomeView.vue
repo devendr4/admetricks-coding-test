@@ -12,9 +12,9 @@ import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue'
       <div class="lg:w-1/2 w-full">
         <MainContent />
       </div>
-      <div class="md:w-1/2 w-full">
+      <div class="lg:w-1/2 w-full">
         <div class="relative">
-          <div class="">
+          <div class="max-w-full">
             <PlaceholderCards />
           </div>
           <div class="absolute -top-[20rem] -right-[37rem] opacity-30">

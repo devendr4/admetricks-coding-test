@@ -1,10 +1,13 @@
+<script setup lang="ts">
+import CustomTitle from './CustomTitle.vue'
+</script>
 <template>
   <div class="p-2 flex justify-center flex-col">
     <h4 class="text-cyan">Estamos para ayudarte</h4>
-    <h1 class="text-4xl mb-5 mt-3">
+    <CustomTitle class="text-4xl mb-5 mt-3">
       ¿Tienes problemas para<br />
       <mark class="under">entender el mercado </mark><br />de la publicidad digital?
-    </h1>
+    </CustomTitle>
     <p class="mb-2">
       El Mercado de la publicidad online es incierto y complejo, Admetricks te
       <mark class="text-cyan bg-transparent">
@@ -13,7 +16,10 @@
       versus los de tu competencia en tiempo real con reportes y alertas automáticas
     </p>
     <div class="flex flex-wrap justify-center items-center gap-4 mt-4">
-      <button class="p-3 bg-cyan pl-10 pr-10 text-black rounded-full">Solicitar demo</button>
+      <RouterLink class="p-3 bg-cyan pl-10 pr-10 text-black rounded-full" to="/currency"
+        >Ver datos del CLP</RouterLink
+      >
+      <button></button>
       <button>Ver funcionalidades</button>
     </div>
   </div>
