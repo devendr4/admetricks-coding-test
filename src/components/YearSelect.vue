@@ -13,8 +13,8 @@ const { year } = storeToRefs(useRootStore())
     v-model="year"
   >
     <!-- https://mindicador.cl/ API has records from 1984 up to now -->
-    <option class="text-white p-3" v-for="i in 40" v-bind:value="i + 1983" v-bind:key="i">
-      {{ i + 1983 }}
+    <option class="text-white p-3" v-for="i in 40" v-bind:value="2024 - i" v-bind:key="i">
+      {{ 2024 - i }}
     </option>
   </select>
 </template>
