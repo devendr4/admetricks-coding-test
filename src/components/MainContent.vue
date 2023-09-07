@@ -6,7 +6,7 @@ import CustomTitle from './CustomTitle.vue'
     <h4 class="text-cyan">Estamos para ayudarte</h4>
     <CustomTitle class="text-4xl mb-5 mt-3">
       ¿Tienes problemas para<br />
-      <mark class="under">entender el mercado </mark><br />de la publicidad digital?
+      <span class="under">entender el mercado </span><br />de la publicidad digital?
     </CustomTitle>
     <p class="mb-2">
       El Mercado de la publicidad online es incierto y complejo, Admetricks te
@@ -31,20 +31,18 @@ h1 {
   z-index: 10;
 }
 .under {
-  background: transparent;
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  white-space: nowrap;
+  position: relative;
 }
-/* .under::before {
-  z-index: -10;
+
+.under::before {
   content: '';
   position: absolute;
-  width: 80%;
-  left: 0;
-  height: 20px;
-  bottom: 30%;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
   border-radius: 200px;
   background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
-} */
+  z-index: -1;
+}
 </style>
