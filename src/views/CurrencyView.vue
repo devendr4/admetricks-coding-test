@@ -14,6 +14,8 @@ const { year } = storeToRefs(useRootStore())
     <CustomTitle class="text-center"
       >Variación diaria del valor del dólar (USD) en pesos chilenos (CLP)</CustomTitle
     >
+
+    <RouterLink class="p-3 pl-10 pr-10 text-red-200 underline" to="/">Regresar</RouterLink>
     <div class="flex flex-wrap">
       <div class="w-full md:w-1/2 flex">
         <YearSelect />

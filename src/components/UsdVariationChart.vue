@@ -6,6 +6,8 @@ import { useGetChartData } from '@/composables/getChartData'
 import { useBuildLineChart } from '@/composables/buildChart'
 import LoadingSpinner from './LoadingSpinner.vue'
 const { year } = storeToRefs(useRootStore())
+//get chart data from composible passing a reactive year
+// in order to fetch new changes
 const { data, isLoading } = useGetChartData(year)
 
 onUpdated(async () => {
@@ -17,7 +19,6 @@ onUpdated(async () => {
 
 onMounted(async () => {
   console.log(data.value)
-  // await buildChart()
 })
 </script>
 
@@ -25,9 +26,9 @@ onMounted(async () => {
   <!-- {{ year }} -->
   <section class="flex w-full justify-center items-center">
     <LoadingSpinner v-if="isLoading" />
-    <svg v-else class="bg-white text-black p-4"></svg>
-
-    <div id="tooltip"></div>
+    <div v-else id="chart-container" class="bg-white text-black p-4 w-full">
+      <div id="tooltip"></div>
+    </div>
   </section>
 </template>
 
@@ -35,7 +36,6 @@ onMounted(async () => {
 rect {
   fill-opacity: 0;
   stroke-opacity: 0;
-  background: red;
   z-index: 1;
 }
 
@@ -47,6 +47,6 @@ rect {
   border: 1px solid white;
   border-radius: 10px;
   display: none;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 </style>

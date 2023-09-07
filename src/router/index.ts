@@ -7,15 +7,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/currency',
       name: 'currency',
       //lazy load currency charts module
-      component: () => import('../views/CurrencyView.vue')
-    }
-  ]
+      component: () => import('../views/CurrencyView.vue'),
+    },
+  ],
 })
 
 export default router

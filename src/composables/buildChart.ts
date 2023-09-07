@@ -1,43 +1,52 @@
+// @ts-nocheck
+//
+
 import type { ChartData } from '@/types'
 import * as d3 from 'd3'
+import { responsivefy } from '@/utils/d3'
 
 export const useBuildLineChart = (data: ChartData[], year: number) => {
-  const margin = { top: 40, right: 30, bottom: 80, left: 80 }
-  const width = 1200 - margin.left - margin.right
+  const margin = { top: 10, right: 50, bottom: 30, left: 90 }
+  const width = 900 - margin.left - margin.right
   const height = 600 - margin.top - margin.bottom
 
   const x = d3.scaleTime().range([0, width])
 
   const y = d3.scaleLinear().range([height, 0])
 
-  // Create the SVG element
   //clear previous svg if year is changed
-  d3.select('svg').selectAll('*').remove()
+  d3.select('#chart-container').selectAll('*').remove()
+
   const svg = d3
-    .select('svg')
-    .attr('width', '100%')
-    .attr('height', '100%')
-    .attr('viewBox', '0 0 ' + width + ' ' + height)
-    .attr('preserveAspectRatio', 'xMinYMin')
+    .select('#chart-container')
+    .append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .call(responsivefy) // this is all it takes to make the chart responsive
     .append('g')
-    .attr('transform', `translate(${margin.left},${margin.top})`)
+    .attr('transform', `translate(${margin.left}, ${margin.top})`)
 
   // Define the x and y domains
+  //
+  const minY = d3.min(data, (d) => d.variation)
+  const maxY = d3.max(data, (d) => d.variation)
 
+  // x.domain(d3.extent(data, (d) => d.date))
   x.domain(d3.extent(data, (d) => d.date))
-  y.domain([d3.min(data, (d) => d.variation) - 20, d3.max(data, (d) => d.variation) + 20])
+  y.domain([minY - 20, maxY + 20])
 
   // Add the x-axis
 
   svg
     .append('g')
-    .attr('transform', `translate(0,${height})`)
+    .attr('transform', `translate(0,${height + 10})`)
     .call(d3.axisBottom(x).ticks(d3.timeMonth.every(1)).tickFormat(d3.timeFormat('%d/%m/%Y')))
 
   // Add the y-axis
 
   svg
     .append('g')
+    .style('font-size', '14px')
     .call(
       d3
         .axisLeft(y)
@@ -72,8 +81,6 @@ export const useBuildLineChart = (data: ChartData[], year: number) => {
     .attr('stroke', '#e4e4e5')
     .attr('stroke-width', 0.8)
 
-  // circle
-  //
   const tooltip = d3.select('section').append('div').attr('class', 'tooltip')
 
   // Add a circle element
@@ -83,7 +90,7 @@ export const useBuildLineChart = (data: ChartData[], year: number) => {
     .attr('r', 0)
     .attr('fill', 'steelblue')
     .style('stroke', 'white')
-    .attr('opacity', 0.7)
+    .attr('opacity', 0.9)
     .style('pointer-events', 'none')
   // create a listening rectangle
 
@@ -110,7 +117,7 @@ export const useBuildLineChart = (data: ChartData[], year: number) => {
 
     circle.transition().duration(50).attr('r', 5)
 
-    // add in  our tooltip
+    // tooltip
 
     tooltip
       .style('display', 'block')
@@ -118,26 +125,24 @@ export const useBuildLineChart = (data: ChartData[], year: number) => {
       .style('top', `${yPos}px`)
       .html(
         `<strong>Date:</strong> ${d.date.toLocaleDateString()}<br><strong>Variation:</strong> ${
-          d.variation || 'N/A'
-        }`
+          (d.variation > 0 ? '+' : '') + d.variation
+        } CLP`
       )
   })
   // listening rectangle mouse leave function
-
   listeningRect.on('mouseleave', function () {
     circle.transition().duration(50).attr('r', 0)
 
     tooltip.style('display', 'none')
   })
 
-  // Create the line generator
+  // line generator
   const line = d3
     .line()
     .x((d) => x(d.date))
     .y((d) => y(d.variation))
 
-  // Add the line path to the SVG element
-
+  // Add line path
   svg
     .append('path')
     .datum(data)
