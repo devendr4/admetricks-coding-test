@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Section } from '../types'
-import CustomTitleVue from './CustomTitle.vue'
+import type { Section } from '../types';
+import CustomTitleVue from './CustomTitle.vue';
 const props = defineProps<{
-  item: Section
-}>()
+  item: Section;
+}>();
 </script>
 <template>
   <div>

@@ -4,8 +4,7 @@
       <img
         class="absolute md:-left-[48px] bottom-72 md:bottom-auto -left-12"
         src="../assets/yellotriangle.png"
-        width="100px"
-      />
+        width="100px" />
     </div>
     <div class="bg-white rounded-xl div1"></div>
     <div class="bg-white rounded-xl div2"></div>

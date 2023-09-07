@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import CustomTitle from '@/components/CustomTitle.vue'
-import DownloadLink from '@/components/DownloadLink.vue'
-import UsdVariationChart from '@/components/UsdVariationChart.vue'
-import YearSelect from '@/components/YearSelect.vue'
-import { useRootStore } from '@/stores/root'
-import { storeToRefs } from 'pinia'
-const link = import.meta.env.VITE_API_URL
-const { year } = storeToRefs(useRootStore())
+import CustomTitle from '@/components/CustomTitle.vue';
+import DownloadLink from '@/components/DownloadLink.vue';
+import UsdVariationChart from '@/components/UsdVariationChart.vue';
+import YearSelect from '@/components/YearSelect.vue';
+import { useRootStore } from '@/stores/root';
+import { storeToRefs } from 'pinia';
+const link = import.meta.env.VITE_API_URL;
+const { year } = storeToRefs(useRootStore());
 </script>
 
 <template>

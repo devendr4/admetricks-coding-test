@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { onUpdated } from 'vue'
-import { useRootStore } from '@/stores/root'
-import { storeToRefs } from 'pinia'
-import { useGetChartData } from '@/composables/getChartData'
-import { useBuildLineChart } from '@/composables/buildChart'
-import LoadingSpinner from './LoadingSpinner.vue'
-const { year } = storeToRefs(useRootStore())
+import { onUpdated } from 'vue';
+import { useRootStore } from '@/stores/root';
+import { storeToRefs } from 'pinia';
+import { useGetChartData } from '@/composables/getChartData';
+import { useBuildLineChart } from '@/composables/buildChart';
+import LoadingSpinner from './LoadingSpinner.vue';
+const { year } = storeToRefs(useRootStore());
 //get chart data from composible passing a reactive year
 // in order to fetch new changes
-const { data, isLoading } = useGetChartData(year)
+const { data, isLoading } = useGetChartData(year);
 
 onUpdated(async () => {
   //get new data for chart each time year changes
-  data.value && useBuildLineChart(data.value, year.value)
-})
+  data.value && useBuildLineChart(data.value, year.value);
+});
 </script>
 
 <template>

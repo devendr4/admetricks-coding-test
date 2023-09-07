@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SectionList from '@/components/SectionList.vue'
-import ContentGrid from '@/components/ContentGrid.vue'
-import PlaceholderCards from '@/components/icons/PlaceholderCards.vue'
-import MainContent from '@/components/MainContent.vue'
-import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue'
+import SectionList from '@/components/SectionList.vue';
+import ContentGrid from '@/components/ContentGrid.vue';
+import PlaceholderCards from '@/components/icons/PlaceholderCards.vue';
+import MainContent from '@/components/MainContent.vue';
+import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue';
 </script>
 
 <template>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h4'
-  class?: string
-}>()
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h4';
+  class?: string;
+}>();
 </script>
 
 <template>
@@ -17,8 +17,7 @@ const props = defineProps<{
         : 'text-xl') +
       ' ' +
       props.class
-    "
-  >
+    ">
     <slot></slot>
   </component>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CustomTitle from './CustomTitle.vue'
+import CustomTitle from './CustomTitle.vue';
 </script>
 <template>
   <div class="p-2 flex justify-center flex-col">

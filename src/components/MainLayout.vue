@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useWindowSize } from 'vue-window-size'
-import greenTriangle from '@/assets/greentriangle.png'
+import { useWindowSize } from 'vue-window-size';
+import greenTriangle from '@/assets/greentriangle.png';
 
-const positions = [20, 35, 50, 65, 80]
-const mobilePositions = [5, 50, 95]
-const { width } = useWindowSize()
+const positions = [20, 35, 50, 65, 80];
+const mobilePositions = [5, 50, 95];
+const { width } = useWindowSize();
 </script>
 
 <template>
@@ -22,8 +22,7 @@ const { width } = useWindowSize()
   <div
     v-for="p in width < 768 ? mobilePositions : positions"
     v-bind:key="p"
-    :class="`vl md: left-${p}%`"
-  ></div>
+    :class="`vl md: left-${p}%`"></div>
   <div class="overflow-hidden">
     <img class="absolute -left-20 top-[10%]" :src="greenTriangle" />
   </div>
