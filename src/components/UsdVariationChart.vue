@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUpdated } from 'vue'
+import { onUpdated } from 'vue'
 import { useRootStore } from '@/stores/root'
 import { storeToRefs } from 'pinia'
 import { useGetChartData } from '@/composables/getChartData'
@@ -11,14 +11,8 @@ const { year } = storeToRefs(useRootStore())
 const { data, isLoading } = useGetChartData(year)
 
 onUpdated(async () => {
-  console.log('updated', year.value)
-  console.log(data.value)
-
+  //get new data for chart each time year changes
   data.value && useBuildLineChart(data.value, year.value)
-})
-
-onMounted(async () => {
-  console.log(data.value)
 })
 </script>
 

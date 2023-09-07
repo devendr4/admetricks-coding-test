@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useWindowSize } from 'vue-window-size'
+import greenTriangle from '@/assets/greentriangle.png'
 
 const positions = [20, 35, 50, 65, 80]
 const mobilePositions = [5, 50, 95]
@@ -8,6 +9,9 @@ const { width } = useWindowSize()
 
 <template>
   <div class="triangle"></div>
+
+  <!-- <div class="vl left-5%"></div>
+  <div class="vl left-95%"></div> -->
 
   <!-- <div class="vl left-20%"></div>
   <div class="vl left-35%"></div>
@@ -21,7 +25,7 @@ const { width } = useWindowSize()
     :class="`vl md: left-${p}%`"
   ></div>
   <div class="overflow-hidden">
-    <img class="absolute -left-20 top-[10%]" src="../assets/greentriangle.png" />
+    <img class="absolute -left-20 top-[10%]" :src="greenTriangle" />
   </div>
 </template>
 
