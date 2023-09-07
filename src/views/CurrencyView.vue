@@ -22,8 +22,8 @@ const { year } = storeToRefs(useRootStore());
       </div>
       <div class="flex gap-2 w-full md:w-1/2 flex-wrap justify-center mb-3">
         <h3 class="w-full text-center">Descargar histórico</h3>
-        <DownloadLink :link="link + `/usd/diff/${year}?filetype=csv`">CSV</DownloadLink>
-        <DownloadLink :link="link + `/usd/diff/${year}?filetype=xlsx`">Excel</DownloadLink>
+        <DownloadLink :link="link + `/usd/${year}?filetype=csv`">CSV</DownloadLink>
+        <DownloadLink :link="link + `/usd/${year}?filetype=xlsx`">Excel</DownloadLink>
       </div>
     </div>
 
