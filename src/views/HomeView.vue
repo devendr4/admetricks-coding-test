@@ -14,7 +14,7 @@ import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue'
       </div>
       <div class="lg:w-1/2 w-full">
         <div class="relative">
-          <div class="max-w-full">
+          <div class="max-w-full p-4">
             <PlaceholderCards />
           </div>
           <div class="absolute -top-[20rem] -right-[37rem] opacity-30 -z-20">

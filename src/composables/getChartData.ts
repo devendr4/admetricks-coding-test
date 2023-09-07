@@ -33,10 +33,6 @@ export const useGetChartData = (year: Ref<number>) => {
         error.value = e
         isLoading.value = false
       })
-
-    // console.log(data.value)
-
-    console.log(parseDate('2023-09-07'))
   })
 
   return { data, error, isLoading }

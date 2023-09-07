@@ -3,8 +3,8 @@ import CustomTitle from './CustomTitle.vue'
 </script>
 <template>
   <div class="p-2 flex justify-center flex-col">
-    <h4 class="text-cyan">Estamos para ayudarte</h4>
-    <CustomTitle class="text-4xl mb-5 mt-3">
+    <p class="text-cyan">Estamos para ayudarte</p>
+    <CustomTitle variant="h1" class="text-4xl mb-5 mt-3">
       ¿Tienes problemas para<br />
       <span class="under">entender el mercado </span><br />de la publicidad digital?
     </CustomTitle>
@@ -19,8 +19,7 @@ import CustomTitle from './CustomTitle.vue'
       <RouterLink class="p-3 bg-cyan pl-10 pr-10 text-black rounded-full" to="/currency"
         >Ver datos del CLP</RouterLink
       >
-      <button></button>
-      <button>Ver funcionalidades</button>
+      <a class="text-white">Ver funcionalidades</a>
     </div>
   </div>
 </template>
@@ -32,6 +31,7 @@ h1 {
 }
 .under {
   white-space: nowrap;
+  font-weight: bold;
   position: relative;
 }
 
