@@ -11,7 +11,7 @@ const props = defineProps<{
     :class="
       'text-white font-bold mb-5 mt-3 ' +
       (props.variant === 'h1'
-        ? 'text-2xl  md:text-4xl'
+        ? 'text-xl  md:text-4xl'
         : props.variant === 'h4'
         ? 'text-sm'
         : 'text-xl') +

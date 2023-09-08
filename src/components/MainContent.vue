@@ -42,7 +42,7 @@ h1 {
   height: 40%;
   bottom: 0;
   border-radius: 200px;
-  background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+  background: linear-gradient(111.3deg, #076585 9.6%, #5a8037 93.6%);
   z-index: -1;
 }
 </style>
