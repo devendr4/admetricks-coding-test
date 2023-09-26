@@ -23,9 +23,7 @@ import BackgroundPolygons from '@/components/icons/BackgroundPolygons.vue';
         </div>
       </div>
     </div>
-    <div>
-      <SectionList />
-    </div>
+    <SectionList />
 
     <ContentGrid />
     <img class="relative md:-left-[17rem] -left-[3rem] w-20%" src="../assets/orangetriangle.png" />

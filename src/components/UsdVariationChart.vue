@@ -10,6 +10,7 @@ const { year } = storeToRefs(useRootStore());
 // in order to fetch new changes
 const { data, isLoading } = useGetChartData(year);
 
+//lifecycle hooks
 onUpdated(async () => {
   //get new data for chart each time year changes
   data.value && useBuildLineChart(data.value, year.value);
